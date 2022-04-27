@@ -1,0 +1,17 @@
+name: Multiple Zigbee2mqtt Home Assistant add-ons
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 minutes
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: andreypolyak/zigbee2mqtt-multi-addon-action@v1.0
+        with:
+          addon_names: "Living Room, Dining Room, Buckbucks Domicile, Babybuckas buckacile, Kitchen"
+          github_token: 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
